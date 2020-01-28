@@ -1,0 +1,15 @@
+<div class="container" style="width: 60%;">
+  <div 
+  infiniteScroll
+  [infiniteScrollDistance]="2"
+  [infiniteScrollThrottle]="5"
+  (scrolled)="onScroll()">
+
+    <app-repository *ngFor="let element of repositories"
+      [repository]="element">
+    </app-repository>
+
+  </div>
+</div>
+
+

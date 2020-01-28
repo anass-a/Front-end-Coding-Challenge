@@ -1,0 +1,28 @@
+<div class="row shadow" style="padding: 20px;">
+  <div class="col-lg-2">
+    <img src='{{ repository.avatar_url }}' class="avatar">
+  </div>
+  <div class="col-lg-10">
+    <div class="cotainer-fluid">
+        <div class="row">
+          <h3>
+            {{ repository.name }}
+          </h3>
+        </div>
+        <div class="row">
+          {{ repository.description }}
+        </div>
+        <div class="row">
+          <span style="padding-right:10px;">
+            <strong>Stars:</strong> {{ repository.nb_stars }}
+          </span> 
+          <span style="padding-right:10px;"> 
+            <strong>Issues:</strong> {{ repository.nb_issues }}
+          </span>
+          <span > 
+            Submitted <strong>{{ repository.getDays() }}</strong> days ago by <strong>{{ repository.ownerName }}</strong>
+          </span>
+        </div>
+    </div>
+  </div>
+</div>
